@@ -1,5 +1,6 @@
 import sys, os
 import subprocess
+import pdb
 
 # def shell():
 # 	# comm = "clear"
@@ -32,6 +33,7 @@ def run(comm):
 	exec = parse(comm)
 	# print(exec)
 	# return 0
+	pdb.set_trace()
 	if exec:
 		return interpret(exec)
 	return None
@@ -39,7 +41,8 @@ def run(comm):
 def main():
 	while True:	
 		try:
-			line = input('>  ')
+			# line = input('>  ')
+			line = "pwd"
 
 			status = run(line)
 		except KeyboardInterrupt:
